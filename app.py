@@ -5,7 +5,7 @@ from werkzeug.utils import secure_filename
 import os
 
 app = Flask(__name__)
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16 MB, kann angepasst werden
+app.config['MAX_CONTENT_LENGTH'] = 16 * 10240000 * 10240000  # 16 MB, kann angepasst werden
 auth = HTTPBasicAuth()
 
 # Beispiel-Benutzerdaten
@@ -21,8 +21,8 @@ def get_pw(username):
 
 
 app_env = os.getenv("test")
-print(app_env)
-
+print(app_env
+)
 UPLOAD_FOLDER = 'uploads'
 
 if not os.path.exists(UPLOAD_FOLDER):
